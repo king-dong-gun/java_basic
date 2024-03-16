@@ -26,6 +26,7 @@ public class ProductOrderMain03 {
         int totalAmount = getTotalAmount(orders);
         System.out.println("총 금액은 " + totalAmount + "원 입니다.");
     }
+    // 입력한 상품명, 가격, 갯수를 저장하는 메소드
     static ProductOrder createOrder(String productName, int price, int quantity) {
         ProductOrder order = new ProductOrder();
         order.productName = productName;
@@ -33,11 +34,13 @@ public class ProductOrderMain03 {
         order.quantity = quantity;
         return order;
     }
+    // 저장된 상품명, 가격, 갯수를 리턴하는 메소드
     static void printOrders(ProductOrder[] orders) {
         for (ProductOrder order : orders) {
             System.out.println("상품명: " + order.productName + ", 가격: " + order.price + ", 갯수: " + order.quantity);
         }
     }
+    // 총 가격을 리턴하는 메소드
     static int getTotalAmount(ProductOrder[] orders) {
         int totalAmount = 0;
         for (ProductOrder order : orders) {
